@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import Introduction from './Introduction'
+import Posts from './Posts'
 
 const App = () => {
-  const someState = useState(0)
+  const someState = useState('')
   return (
     <>
-      <div>Hey there</div>
+      <Introduction />
+      <Posts />
     </>
   )
 }

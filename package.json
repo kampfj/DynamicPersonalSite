@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kampfj/DynamicPersonalSite#readme",
   "devDependencies": {
+    "core-js-compat": "^3.4.7",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-react": "^7.20.0",
@@ -26,10 +27,12 @@
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.6.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
     "parcel-bundler": "^1.12.4",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.5.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",

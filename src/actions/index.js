@@ -6,12 +6,13 @@ let counter = 0
  * @param {*} post
  * @returns object with type: 'ADD_POST'
  */
-const addPost = ({ text, title }) => {
+export const addPost = ({ text, title, image }) => {
   counter += 1
   return {
     type: 'ADD_POST',
     text,
     title,
+    image,
     id: counter,
   }
 }
@@ -21,7 +22,7 @@ const addPost = ({ text, title }) => {
  * @param {*} introduction
  * @returns object with type: 'EDIT_INTRODUCTION'
  */
-const editIntroduction = ({ name, image, description }) => ({
+export const editIntroduction = (name, image, description) => ({
   type: 'EDIT_INTRODUCTION',
   name,
   image,

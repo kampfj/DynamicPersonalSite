@@ -6,9 +6,19 @@
 const posts = (state = [], action) => {
   switch (action.type) {
     case 'ADD_POST': {
-      const { text, title, id } = action
+      const {
+        text,
+        title,
+        image,
+        id,
+      } = action
       return [
-        ...state, { text, title, id },
+        ...state, {
+          text,
+          title,
+          image,
+          id,
+        },
       ]
     }
     default:

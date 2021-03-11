@@ -18,6 +18,7 @@
     "no-tabs": 2,
     "no-underscore-dangle": 0,
     "no-unused-vars": 0,
+    "react/jsx-one-expression-per-line": "off",
     "quote-props": [2, "as-needed"],
     "quotes": [2, "single", "avoid-escape"],
     "strict": 0,
