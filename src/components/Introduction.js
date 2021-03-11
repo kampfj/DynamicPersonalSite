@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import { Container, Card, Button, Row, Col, Image } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import IntroductionForm from './IntroductionForm'
-import { PaddedDiv } from '../styles/styledComps'
+import { PaddedDiv, DivWithBackground } from '../styles/styledComps'
 
 const Introduction = ({ introduction }) => {
   // clicked EditDescription
   const [editIntroductionMode, setEditIntroductionMode] = useState(false)
-  const { name, image, description } = introduction
+  const { name, image, description, socialMedia } = introduction
 
   const editIntroduction = () => {
     setEditIntroductionMode(true)
   }
 
   return (
-    <>
+    <DivWithBackground>
       <PaddedDiv className="container">
         <div className="row">
           <div className="col">
@@ -40,24 +40,18 @@ const Introduction = ({ introduction }) => {
         {name !== undefined
         && (
           <Container>
-            <Row>
-              <Col>
-                <Card style={{ width: '20rem', height: '20 rem' }}>
-                  <Card.Img variant="top" src={image} />
-                  <Card.Body>
-                    <Card.Title>Hey - I'm {name}</Card.Title>
-                    <Card.Text>
-                      {description}
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+            <div className="row">
+              <div className="col">
+                <Image src={image} rounded />
+              </div>
+              <div className="col">
+                <h3> Hey - I'm {name}. {description} </h3>
+              </div>
+            </div>
           </Container>
         )}
       </PaddedDiv>
-    </>
+    </DivWithBackground>
   )
 }
 

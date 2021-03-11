@@ -7,7 +7,13 @@ const StyledH1 = s.h1`
 const PaddedDiv = s.div`
   padding-top: 45px;
   padding-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
   font-family: Mukta, sans-serif;
 `
 
-export { StyledH1, PaddedDiv }
+const DivWithBackground = s.div`
+  
+`
+
+export { StyledH1, PaddedDiv, DivWithBackground }

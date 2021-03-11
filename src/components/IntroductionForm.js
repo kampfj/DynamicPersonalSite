@@ -4,13 +4,15 @@ import { connect } from 'react-redux'
 import { editIntroduction } from '../actions'
 
 const IntroductionForm = props => {
-  const { dispatchEditIntroduction, editIntroductionMode, setEditIntroductionMode } = props
+  const { introduction, dispatchEditIntroduction, editIntroductionMode, setEditIntroductionMode } = props
   // name
-  const [name, setName] = useState('')
+  const [name, setName] = useState(introduction.name ? introduction.name : '')
   // image
-  const [image, setImage] = useState('')
+  const [image, setImage] = useState(introduction.image ? introduction.image : '')
   // description
-  const [description, setDescription] = useState('')
+  const [description, setDescription] = useState(introduction.description ? introduction.description : '')
+  // social media link
+  const [socialMedia, setSocialMedia] = useState(introduction.socialMedia ? introduction.socialMedia : '')
 
   /**
    * Remove the modal form and reset state.
@@ -20,6 +22,7 @@ const IntroductionForm = props => {
     setName('')
     setImage('')
     setDescription('')
+    setSocialMedia('')
   }
 
   /**
@@ -27,7 +30,7 @@ const IntroductionForm = props => {
    */
   const submitIntroductionHelper = () => {
     setEditIntroductionMode(false)
-    dispatchEditIntroduction(name, image, description)
+    dispatchEditIntroduction(name, image, description, socialMedia)
   }
   return (
     // return form here
@@ -56,6 +59,11 @@ const IntroductionForm = props => {
               <Form.Label> Description </Form.Label>
               <Form.Control value={description} onChange={e => setDescription(e.target.value)} placeholder="Enter Description" />
             </Form.Group>
+            <br />
+            <Form.Group>
+              <Form.Label> Social Media Link </Form.Label>
+              <Form.Control value={socialMedia} onChange={e => setSocialMedia(e.target.value)} placeholder="Enter link to social" />
+            </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -69,7 +77,11 @@ const IntroductionForm = props => {
 
 const mapDispatchToProps = dispatch => ({
   dispatchEditIntroduction:
-    (name, image, description) => dispatch(editIntroduction(name, image, description)),
+    (name, image, description, socialMedia) => dispatch(editIntroduction(name, image, description, socialMedia)),
 })
 
-export default connect(null, mapDispatchToProps)(IntroductionForm)
+const mapStateToProps = state => ({
+  introduction: state.introduction,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(IntroductionForm)

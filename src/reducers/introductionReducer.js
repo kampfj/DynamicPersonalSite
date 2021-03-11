@@ -6,8 +6,18 @@
 const introduction = (state = {}, action) => {
   switch (action.type) {
     case 'EDIT_INTRODUCTION': {
-      const { name, image, description } = action
-      return { name, image, description }
+      const {
+        name,
+        image,
+        description,
+        socialMedia,
+      } = action
+      return {
+        name,
+        image,
+        description,
+        socialMedia,
+      }
     }
     default:
       return state

@@ -3,10 +3,10 @@ import Introduction from './Introduction'
 import Posts from './Posts'
 
 const App = () => {
-  const someState = useState('')
   return (
     <>
       <Introduction />
+      <hr />
       <Posts />
     </>
   )
