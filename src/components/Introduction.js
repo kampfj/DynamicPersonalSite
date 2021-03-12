@@ -18,11 +18,12 @@ const Introduction = ({ introduction }) => {
       <PaddedDiv className="container">
         <div className="row">
           <div className="col">
-            <h1> Hey, this is me! </h1>
+             <h1> &nbsp; &nbsp; &nbsp; hey, this is me. </h1>
           </div>
           <div className="col" />
           <div className="col" />
           <div className="col">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <Button
               variant="outline-primary"
               type="button"

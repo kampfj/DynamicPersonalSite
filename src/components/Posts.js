@@ -22,7 +22,7 @@ const Posts = ({ posts }) => {
     <PaddedDiv>
       <Container>
         <Row>
-          <h2> Welcome to my World. </h2>
+          <h1> welcome to my world. </h1>
           <Col />
           <Col />
           <Col />
