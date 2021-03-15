@@ -40,7 +40,9 @@ const Posts = ({ posts }) => {
         </Row>
         <PaddedDiv>
           <CardGroup>
-            {posts.map(post => <Col xs={3} key={getCount()}><Post key={getCount()} post={post} /> </Col>)}
+            {posts.map(
+              post => <Col xs={3} key={getCount()}><Post key={getCount()} post={post} /> </Col>,
+            )}
           </CardGroup>
         </PaddedDiv>
         { addPostMode ? <AddPostForm addPostMode={addPostMode} setAddPostMode={setAddPostMode} /> : ''}

@@ -18,7 +18,7 @@ const Introduction = ({ introduction }) => {
       <PaddedDiv className="container">
         <div className="row">
           <div className="col">
-             <h1> &nbsp; &nbsp; &nbsp; hey, this is me. </h1>
+            <h1> &nbsp; &nbsp; &nbsp; hey, this is me. </h1>
           </div>
           <div className="col" />
           <div className="col" />
@@ -43,7 +43,7 @@ const Introduction = ({ introduction }) => {
           <Container>
             <div className="row">
               <div className="col">
-                <Image src={image} rounded />
+                <Image style={{ 'max-height': '750px', 'max-width': '750px' }} className="max-ehgi" src={image} rounded />
               </div>
               <div className="col">
                 <h3> Hey - I'm {name}. {description} </h3>
